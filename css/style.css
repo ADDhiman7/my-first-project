@@ -1,0 +1,616 @@
+
+
+h1,h2,h3,h4,ul,li{
+    margin: 0px;
+    padding: 0px;
+}
+
+*{
+     font-family: "Montserrat", sans-serif;
+}
+
+.hero h1{
+    padding-top: 120px;
+    color:#fff;
+    font-weight: 700;
+}
+.logo{
+    width: 20px;
+    height: 20px;
+}
+.care{
+    color:khaki;
+}
+.nav-link:hover{
+    color: khaki!important;
+}
+.nav-link{
+    color:#fff!important;
+}
+.hero{
+    margin-top: 80px;
+}
+.hero p{
+    color: #fff;
+}
+.btn-primary{
+    background-color:khaki;
+    color: #000;
+    border-color: yellow;
+    margin-top: 40px;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #1D434E;
+  border-color:#000;
+}
+.lap{
+    text-transform: uppercase;
+    color: khaki;
+}
+.bg2{
+    background-color:bisque;
+    height: 700px;
+    padding:30px 0;
+}
+.clear{
+    clear: both;
+}
+.container-fluid{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.content h2{
+    margin-top: 40px;
+}
+.sec h2{
+    padding: 0px ;
+    margin: 0px;
+}
+.bg3{
+    background-color:#1D434E;
+    padding:80px 0;
+    min-height: 750px;
+}
+.card{
+    margin-top: 10px;
+    background-color: bisque;
+    overflow: hidden;
+}
+.card-img-top {
+  transition: transform 0.4s ease;
+  will-change: transform;
+  transform-origin: center;
+}
+.OS{
+    color: #fff;
+}
+.bg4{
+    background-color: bisque;
+    height: 400px;
+    padding: 70px 0;
+}
+.brands{
+    padding-top: 40px;
+}
+.brand-box{
+    border: 2px solid #ddd;
+    padding: 25px;
+    height: 150px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.bg5{
+    height: 650px;
+}
+.bg6{
+    background-color: bisque;
+    height: 320px;
+}
+.bg7{
+    background-image: url(../IMAGESBS/Hero.jpg);
+    height: 350px;
+}
+.footer1{
+    color: white;
+}
+.fa-facebook-f{
+    color: white;
+}
+.fa-facebook-f:hover{
+    color: khaki;
+}
+.fa-instagram{
+    color: white;
+}
+.fa-instagram:hover{
+    color: khaki;
+}
+.fa-youtube{
+    color: white;
+}
+.fa-youtube:hover{
+    color: khaki;
+}
+.fa-x-twitter{
+    color: white;
+}
+.fa-x-twitter:hover{
+    color: khaki;
+}
+.footer2{
+    color: white;
+}
+.link1{
+    color: #fff;
+    
+}
+.link1:hover{
+    color: khaki;
+    text-decoration: none;
+}
+.link2{
+    color: #fff;
+    
+}
+.link2:hover{
+    color: khaki;
+    text-decoration: none;
+}
+.link3{
+    color: #fff;
+    
+}
+.link3:hover{
+    color: khaki;
+    text-decoration: none;
+}
+  .newsletter-box {
+    color: #fff;
+    padding: 40px;
+    border-radius: 6px;
+    max-width: 600px;
+  }
+  .newsletter-box input {
+    border-radius: 0;
+  }
+  .newsletter-box button {
+    background-color: #f7941d;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+  }
+  .newsletter-box button:hover {
+    background-color: #e6830d;
+  }
+  .next{
+    width: 35px;
+    background-color: khaki !important;
+    color: #000 !important;
+    height: 38px;
+    border-radius: 0px !important;
+
+  }
+.newsletter-box{
+    padding: 0px 0;
+}
+
+.head{
+    font-size: 25px;
+}
+
+
+.modal-content {
+  border-radius: 12px;
+}
+
+.modal.show .modal-content {
+  background-color: bisque !important;
+}
+
+.modal.show .btn.btn-primary:hover {
+  background-color: khaki !important;
+  border-color: khaki !important;
+  color: #000 !important;
+}
+
+
+
+/* media starts*/
+
+
+@media only screen and (max-width: 420px){
+
+.bg2{
+    background-color:bisque;
+    height: auto;
+    padding:30px 0;
+}
+.bg3{
+    background-color:#1D434E;
+    padding:80px 0;
+    height:auto;
+}
+.bg4{
+    background-color: bisque;
+    height:auto;
+    padding: 70px 0;
+}
+.brand-box{
+    border: 2px solid #ddd;
+    padding: 25px;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.bg5{
+    height: auto;
+    padding-bottom: 30px;
+}
+.bg6{
+    background-color: bisque;
+    height:auto;
+    padding-bottom: 30px;
+}
+.bg7{
+    background-image: url(../IMAGESBS/Hero.jpg);
+    height:auto;
+    padding-bottom: 30px;
+}
+.card-body{
+    height: 300px!important;
+}
+
+
+}
+
+@media only screen and (max-width: 578px){
+
+.bg2{
+    background-color:bisque;
+    height: auto;
+    padding:30px 0;
+}
+.bg3{
+    background-color:#1D434E;
+    padding:80px 0;
+    height:auto;
+}
+.bg4{
+    background-color: bisque;
+    height:auto;
+    padding: 70px 0;
+}
+.brand-box{
+    border: 2px solid #ddd;
+    padding: 25px;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.bg5{
+    height: auto;
+    padding-bottom: 30px;
+}
+.bg6{
+    background-color: bisque;
+    height:auto;
+    padding-bottom: 30px;
+}
+.bg7{
+    background-image: url(../IMAGESBS/Hero.jpg);
+    height:auto;
+    padding-bottom: 30px;
+}
+.card-body{
+    height: 300px!important;
+}
+}
+
+@media only screen and (max-width: 600px){
+
+.bg2{
+    background-color:bisque;
+    height: auto;
+    padding:30px 0;
+}
+.bg3{
+    background-color:#1D434E;
+    padding:80px 0;
+    height:auto;
+}
+.bg4{
+    background-color: bisque;
+    height:auto;
+    padding: 70px 0;
+}
+.brand-box{
+    border: 2px solid #ddd;
+    padding: 25px;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.bg5{
+    height: auto;
+    padding-bottom: 30px;
+}
+.bg6{
+    background-color: bisque;
+    height:auto;
+    padding-bottom: 30px;
+}
+.bg7{
+    background-image: url(../IMAGESBS/Hero.jpg);
+    height:auto;
+    padding-bottom: 30px;
+}
+.card-body{
+    height: 430px!important;
+}
+}
+
+@media only screen and (max-width: 768px){
+
+.bg2{
+    background-color:bisque;
+    height: auto;
+    padding:30px 0;
+}
+.bg3{
+    background-color:#1D434E;
+    padding:80px 0;
+    height:auto;
+}
+.bg4{
+    background-color: bisque;
+    height:auto;
+    padding: 70px 0;
+}
+.brand-box{
+    border: 2px solid #ddd;
+    padding: 25px;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.bg5{
+    height: auto;
+    padding-bottom: 30px;
+}
+.bg6{
+    background-color: bisque;
+    height:auto;
+    padding-bottom: 30px;
+}
+.bg7{
+    background-image: url(../IMAGESBS/Hero.jpg);
+    height:auto;
+    padding-bottom: 30px;
+}
+.card-body{
+    height: 500px!important;
+}
+}
+
+@media only screen and (max-width: 900px){
+
+
+.bg2{
+    background-color:bisque;
+    height: auto;
+    padding:30px 0;
+}
+.bg3{
+    background-color:#1D434E;
+    padding:80px 0;
+    height:auto;
+}
+.bg4{
+    background-color: bisque;
+    height:auto;
+    padding: 70px 0;
+}
+.brand-box{
+    border: 2px solid #ddd;
+    padding: 25px;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.bg5{
+    height: auto;
+    padding-bottom: 30px;
+}
+.bg6{
+    background-color: bisque;
+    height:auto;
+    padding-bottom: 30px;
+}
+.bg7{
+    background-image: url(../IMAGESBS/Hero.jpg);
+    height:auto;
+    padding-bottom: 30px;
+}
+.card-body{
+    height: 500px!important;
+}
+}
+
+@media only screen and (max-width: 1200px){
+
+  
+.bg2{
+    background-color:bisque;
+    height: auto;
+    padding:30px 0;
+}
+.bg3{
+    background-color:#1D434E;
+    padding:80px 0;
+    height:auto;
+}
+.bg4{
+    background-color: bisque;
+    height:auto;
+    padding: 70px 0;
+}
+.brand-box{
+    border: 2px solid #ddd;
+    padding: 25px;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.bg5{
+    height: auto;
+    padding-bottom: 30px;
+}
+.bg6{
+    background-color: bisque;
+    height:auto;
+    padding-bottom: 30px;
+}
+.bg7{
+    background-image: url(../IMAGESBS/Hero.jpg);
+    height:auto;
+    padding-bottom: 30px;
+}
+.card-body{
+    height: 300px!important;
+}
+}
+
+@media only screen and (max-width: px){
+
+
+.bg2{
+    background-color:bisque;
+    height: auto;
+    padding:30px 0;
+}
+.bg3{
+    background-color:#1D434E;
+    padding:80px 0;
+    height:auto;
+}
+.bg4{
+    background-color: bisque;
+    height:auto;
+    padding: 70px 0;
+}
+.brand-box{
+    border: 2px solid #ddd;
+    padding: 25px;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.bg5{
+    height: auto;
+    padding-bottom: 30px;
+}
+.bg6{
+    background-color: bisque;
+    height:auto;
+    padding-bottom: 30px;
+}
+.bg7{
+    background-image: url(../IMAGESBS/Hero.jpg);
+    height:auto;
+    padding-bottom: 30px;
+}
+.card-body{
+    height: 300px!important;
+}
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  
+}
+
+.slider {
+  position: relative;
+  height: 650px;
+  overflow: hidden;
+}
+
+.slider-content {
+  position: absolute;
+  inset: 0;              
+  z-index: 10;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); 
+  z-index: 5;
+}
+
+
+.slider-content {
+  z-index: 20;
+}
+
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  display: block;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" type="text/css" media="all" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" media="all" rel="stylesheet"/>
+    <title>LapCare</title>
+
+    <link href="css/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<script type="text/javascript">
+	
+		function val()
+		{
+			var a=document.getElementById("a1").value;
+			var b=document.getElementById("b1").value;
+			var c=document.getElementById("c1").value;
+			var d=document.getElementById("d1").value;
+			
+			if(a=="" ||b==""||c==""||d=="") 
+			{
+				alert("All Fields are mandatory");
+				return false;
+			}
+			else if(b.length<10)	
+			{
+				alert("Please Enter Valid Email Address");
+				return false;
+			}
+			else if(c.length<10 || c.length>10)
+			{
+				alert("Pleare Enter A Valid Mobile Number");
+				return false;
+			}
+      else if(isNaN(c))
+			{
+				alert("Enter Numbers Only");
+				return false;
+			}
+			else if(d.lengh<15)
+			{
+				alert("Minimum 15 Words");
+				return false;
+			}
+			else
+			{
+				alert("Retry");
+				false;
+			}
+    }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const slider = document.getElementById("slider");
+  const slides = document.getElementById("slides");
+  let slideItems = document.querySelectorAll(".slide");
+  const total = slideItems.length;
+
+  let index = 1;
+  let interval;
+
+
+  const firstClone = slideItems[0].cloneNode(true);
+  const lastClone = slideItems[total - 1].cloneNode(true);
+
+  slides.appendChild(firstClone);
+  slides.insertBefore(lastClone, slideItems[0]);
+
+  slideItems = document.querySelectorAll(".slide");
+
+  slides.style.transform = `translateX(-${index * 100}%)`;
+
+  function moveSlide() {
+    slides.style.transition = "transform 0.7s ease-in-out";
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    index++;
+    moveSlide();
+  }
+
+  function prevSlide() {
+    index--;
+    moveSlide();
+  }
+
+  slides.addEventListener("transitionend", () => {
+    if (slideItems[index].isSameNode(firstClone)) {
+      slides.style.transition = "none";
+      index = 1;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    if (slideItems[index].isSameNode(lastClone)) {
+      slides.style.transition = "none";
+      index = total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+  });
+
+  function startAuto() {
+    interval = setInterval(nextSlide, 3000);
+  }
+
+  function stopAuto() {
+    clearInterval(interval);
+  }
+
+  slider.addEventListener("mouseenter", stopAuto);
+  slider.addEventListener("mouseleave", startAuto);
+
+  
+  document.getElementById("next").onclick = nextSlide;
+  document.getElementById("prev").onclick = prevSlide;
+
+  startAuto();
+});
+</script>
+
+
+
+
+</head>
+<body>
+
+
+ <div class="container-fluid p-0">
+  <div class="slider" id="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="home1.jpg"></div>
+      <div class="slide"><img src="home2.jpg"></div>
+      <div class="slide"><img src="home3.jpg"></div>
+    </div>
+
+    <div class="slider-content">
+
+      <div class="container">
+      
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="#">LAP<span class="care">Care</span></a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mynav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Category</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="../temp_bootstrap/Contact Page/page.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </nav>
+
+       
+        <div class="row hero pt-6">
+          <div class="col-sm text-center text-white">
+            <h1>
+              YOUR TRUSTED <br>
+              <span class="lap">Laptop Care</span> PARTNER
+            </h1>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis nobis quod debitis officia.
+            </p>
+
+            <button class="btn btn-primary btn1">LEARN MORE</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="prev" class="arrow left">&#10094;</button>
+    <button id="next" class="arrow right">&#10095;</button>
+
+  </div>
+</div>
+
+    </div>
+     <div class="container-fluid mt-0 bg2">
+          <div class="container">
+            <div class="row content">
+            <div class="col-sm text-center sec">
+            <h2>Expert Laptop Care Starts Here!</h2>
+            </div>
+            </div>
+            <div class="row pt-5">
+              <div class="col-sm-6" data-aos="fade-right"><img src="../temp_bootstrap/IMAGESBS/ChatGPT Image Dec 17, 2025, 01_30_03 PM.png" alt="" class="img-fluid"></div>
+              <div class="col-sm-6" data-aos="fade-left"><p>At LapCare, we are dedicated to providing reliable, efficient, and high-quality laptop repair services for all major brands. Our experienced technicians work with precision to diagnose and fix a wide range of hardware and software issues. From complex motherboard repairs and screen replacements to battery problems, overheating, and performance optimization, we handle every device with expert care.
+
+We understand how important your laptop is for work, study, and daily life. That’s why we focus on accurate diagnostics, transparent pricing, and quick turnaround times. Using advanced tools and genuine spare parts, we ensure long-lasting solutions that restore your laptop’s performance and reliability.
+
+Customer satisfaction is at the heart of everything we do. Our team takes the time to explain issues clearly and recommend the best repair options without unnecessary costs. Whether your laptop is running slow, damaged, or completely unresponsive, LapCare offers dependable solutions you can trust.
+
+With a commitment to quality service, honest practices, and professional support.</p>
+              <button type="button" class="btn btn-primary ">BOOK APPOINTMENT!</button>
+              </div>
+            </div>
+          </div>
+     </div>
+ </div> 
+ <div class="Flexbox"></div>
+ <div class="container-fluid bg3 py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm text-center OS" style="margin-top: 20px;">
+      <h3>OUR SERVICES</h3>
+      <p>Reliable laptop repair with expert care and quick service.</p>
+      </div>
+      </div>
+      <div class="row" data-aos="fade-right">
+      <div class="col-md-4">
+        <div class="card">
+  <img src="../temp_bootstrap/IMAGESBS/Card1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title head">Laptop Hardware Repair</h5>
+    <p class="card-text">Expert repair for all laptop hardware issues with reliable and <br> fast service.</p>
+    <a href="#" class="btn btn-primary">See More</a>
+  </div>
+</div>
+</div>
+  <div class="col-md-4">
+    <div class="card">
+  <img src="../temp_bootstrap/IMAGESBS/card2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title head">Software & OS <br>Support</h5>
+    <p class="card-text">Windows installation, virus removal, and system optimization <br> made easy.</p>
+    <a href="#" class="btn btn-primary">See More</a>
+  </div>
+</div>
+</div>
+  <div class="col-md-4">
+    <div class="card">
+  <img src="../temp_bootstrap/IMAGESBS/card3.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title head">Chip Level <br> Repair</h5>
+    <p class="card-text">Advanced chip-level and motherboard repairs by skilled  technicians.</p>
+    <a href="#" class="btn btn-primary">See More</a>
+  </div>
+</div>
+</div>
+    </div>
+  <div class="row">
+    <div class="col-sm text-center">
+    <button type="button" class="btn btn-primary">LOAD MORE SERVICES</button>
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="container-fluid bg4 py-5">
+    <div class="container">
+      <div class="row brands">
+        <div class="col-sm text-center"><h3>Brands We Work With</h3><br>
+        <p>We work with various kinds of brands and we provide the money back services.</p></div>
+        <div class="row text-center g-4">
+          <div class="col-sm-3 col-6" data-aos="fade-right">
+            <div class="brand-box">
+              <img src="../temp_bootstrap/IMAGESBS/DELL" class="img-fluid" alt="Dell">
+              </div>
+              </div>
+              <div class="col-sm-3 col-6" data-aos="fade-right">
+            <div class="brand-box">
+              <img src="../temp_bootstrap/IMAGESBS/ACER" class="img-fluid" alt="Acer">
+              </div>
+              </div>
+              <div class="col-sm-3 col-6" data-aos="fade-left">
+            <div class="brand-box">
+              <img src="../temp_bootstrap/IMAGESBS/hp" class="img-fluid" alt="HP">
+              </div>
+              </div>
+              <div class="col-sm-3 col-6"data-aos="fade-left">
+            <div class="brand-box">
+              <img src="../temp_bootstrap/IMAGESBS/SAMSUNG" class="img-fluid" alt="Samsung">
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg5">
+    <div class="container">
+      <div class="row pt-5">
+        <div class="col-sm-6" data-aos="fade-right">
+          <h2>Professional Laptop Repair & Technical Support</h2>
+           <p>n today’s fast-paced digital world, a laptop is more than just a device—it is an essential tool for work, study, entertainment, and communication. When a laptop stops working properly, it can disrupt daily life and productivity. This is where professional laptop repair services play a vital role, ensuring that your device is restored quickly, safely, and efficiently.
+
+A skilled laptop repair technician carefully diagnoses hardware and software issues using the right tools and technical expertise. From faulty keyboards, damaged screens, overheating problems, and battery failures to complex motherboard repairs, every task requires precision and patience. Professional repair work not only fixes the visible problem but also identifies hidden issues that could cause future breakdowns.
+
+Expert laptop repairing focuses on quality and reliability. Genuine or high-grade compatible parts are used to maintain performance and extend the lifespan of the device. Proper repair also helps users save money by avoiding unnecessary replacements and data loss.</p>
+        <button type="button" class="btn btn-primary">Know More!</button>
+          </div>
+        <div class="col-sm-6" data-aos="fade-left">
+          <img src="../temp_bootstrap/IMAGESBS/gptimg.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg6">
+    <div class="container">
+      <div class="row pt-5">
+        <div class="col-sm-6" data-aos="fade-right">
+          <h3>Book Appointment Now!</h3>
+          <p>Please fill out the booking form and very soon we will contact with you to schedule an appointment.</p>
+        </div>
+        <div class="col-sm-6" data-aos="fade-left">
+                      <form onsubmit="val()" action="#" method="GET" >
+                <div class="row g-3 mb-3">
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control bg-light border-0" placeholder="Name" id="a1"> 
+                    </div>
+
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control bg-light border-0" placeholder="Email" id="b1">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <input type="tel" class="form-control bg-light border-0" placeholder="Phone" id="c1">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <textarea class="form-control bg-light border-0" rows="4" placeholder="Your Message..." id="d1"></textarea>
+                </div>
+
+                <button type="submit" class="btn px-4 py-3 text-white" style="background:#4a4a4a;">
+                    GET APPOINTMENT
+                </button>
+            </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg7">
+    <div class="container">
+      <div class="row pt-5" data-aos="zoom-in">
+        <div class="col-sm-4 footer1 ">
+          <h4>ABOUT US</h4>
+          <p>LAPCare offers professional laptop repair services at our retail locations throughout world. The high level of customer service has allowed to open multiple full-service repair centers.</p>
+          <div class="row">
+            <div class="col-sm">
+              <a href="https:/www.facebook.com" target="blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="col-sm">
+              <a href="https:/www.instagram.com/itz._.dhiman._.07" target="blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="col-sm">
+              <a href="https:/www.youtube.com" target="blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="col-sm">
+              <a href="https:/www.x.com" target="blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 footer2">
+          <h4>CONTACT US</h4>
+          <div class="allign pt-2">
+          <div class="d-flex align-items-start mb-2">
+          <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+          <p><a href="#" class="link1 pl-2">abcd@xyz.com</a></p>
+          </div>
+          <div class="d-flex align-items-start mb-2">
+          <i class="fa-solid fa-location-arrow" style="color: #ffffff;"></i>
+          <p><a href="#" class="link2 pl-2">000,ABC City,XYZ State,000000 </a></p>
+          </div>
+          <div class="d-flex align-items-start mb-2">
+          <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+          <p><a href="#" class="link3 pl-2">+111 900 300, +999 769 775</a></p>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 footer3">
+        <div class="newsletter-box">
+    <h4 class="fw-bold text">Newsletter</h4>
+    <p class="mb-4">
+      Signup for regular newsletter and<br>
+      stay upto date with our latest news
+    </p>
+
+    <div class="input-group">
+      <input type="email" class="form-control" placeholder="Your email address">
+      <button class="btn next">></button>
+      
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+       
+  
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const images = document.querySelectorAll(".card-img-top");
+
+  images.forEach(function (img) {
+
+    img.addEventListener("mouseenter", function () {
+      this.style.transform = "scale(1.15)";
+    });
+
+    img.addEventListener("mouseleave", function () {
+      this.style.transform = "scale(1)";
+    });
+
+  });
+
+});
+</script>
+
+
+
+<div class="modal fade" id="onLoadModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Stay Connected 📩</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p>Enter your email to get updates & offers.</p>
+
+        <form id="emailForm">
+          <div class="form-group">
+            <input 
+              type="email" 
+              class="form-control" 
+              id="userEmail" 
+              placeholder="Enter your email"
+              required
+            >
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const modalEl = document.getElementById("onLoadModal");
+  const myModal = new bootstrap.Modal(modalEl);
+
+
+  myModal.show();
+
+  document.getElementById("emailForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const email = document.getElementById("userEmail").value;
+
+    if(email){
+      console.log("Email:", email);
+      alert("Thanks! Email submitted ✅");
+      myModal.hide();
+    }
+  });
+
+});
+</script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
